@@ -8,7 +8,7 @@ def saludar(request):
     respuesta_http = HttpResponse(saludo)
     return respuesta_http
 
-def saludar_con_fecha(request):
+def saludarfecha(request):
     hoy = datetime.now()
     saludo = f"hola usuraio, fecha:{hoy.day}/{hoy.month}"
     respuesta_http = HttpResponse(saludo)
