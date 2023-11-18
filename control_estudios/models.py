@@ -1,11 +1,11 @@
 from django.db import models
 
 # Create your models here.
-class curso(models.Model):
+class Curso(models.Model):
     nombre = models.CharField(max_length=64)
-    camada = models.IntegerField ()
+    comision = models.IntegerField ()
     
-class estudiante(models.Model):
+class Estudiante(models.Model):
     apellido = models.CharField(max_length=256)
     nombre = models.CharField(max_length=256)
     email = models.EmailField(blank=True)
@@ -13,7 +13,7 @@ class estudiante(models.Model):
     dni = models.CharField(max_length=32)
     fecha_nacimiento = models.DateField(null=True)
 
-class profesor(models.Model):
+class Profesor(models.Model):
     apellido = models.CharField(max_length=256)
     nombre = models.CharField(max_length=256)
     dni = models.CharField(max_length=32)
@@ -22,7 +22,7 @@ class profesor(models.Model):
     profesion = models.CharField(max_length=128)
     bio = models.TextField(blank=True, null=True)
     
-class entregable(models.Model):
+class Entregable(models.Model):
     nombre = models.CharField(max_length=256)
     fecha_entrega = models.DateTimeField(auto_now_add=True)
     esta_aprobado = models.BooleanField(default=False)
