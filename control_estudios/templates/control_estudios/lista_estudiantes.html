@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Coder</title>
+</head>
+<body>
+    <h1 style="color: blue;">
+    Bienvenidos, les saluda {{ profesor }}
+    </h1>
+    
+    <h3>Alumnos inscriptos:</h3>
+
+    <ul>
+    {% for estudiante in estudiantes %}
+        <li>
+            {{ esudiante.apellido}}, {{ estudiante.nombre}}
+            {% if estudiante.nota >= 5 %}
+            APROBADO
+            {% else %}
+            REPROBADO
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    
+    
+</body>
+</html>
