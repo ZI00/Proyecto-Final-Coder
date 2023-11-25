@@ -1,25 +1,42 @@
 {% extends "base.html" %}
 
 {% block titulo %}
-<title>Codificando 50000 - Estudiantes</title>
+<title>Coderhouse 47780 - Estudiantes</title>
 {% endblock titulo %}
 
 {% block contenido %}
-<h1 style="color:orange;">
-  Bienvenidos, les saluda {{ profesor }}
-</h1>
+<h3>Alumnos inscritos</h3>
+<a href="{% url 'crear_estudiante' %}">Crear estudiante</a>
+<br>
 
-<h3>Alumnos inscritos:</h3>
-<ul>
-{% for estudiante in estudiantes %}
-  <li>
-    {{ estudiante.apellido }}, {{ estudiante.nombre }}
-    {% if estudiante.nota < 5 %}
-      REPROBADO
-    {% else %}
-      APROBADO
-    {% endif %}
-  </li>
-{% endfor %}
-</ul>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for estudiante in object_list %}
+    <tr>
+      <td>{{ estudiante.id }}</td>
+      <td>{{ estudiante.nombre }}</td>
+      <td>{{ estudiante.apellido }}</td>
+      <td>
+        <a href="{% url 'ver_estudiante' estudiante.id %}">Ver</a>
+      </td>
+      <td>
+        <a href="{% url 'editar_estudiante' estudiante.id %}">Editar</a>
+      </td>
+      <td>
+        <a href="{% url 'eliminar_estudiante' estudiante.id %}">
+          <i class="bi bi-trash"></i>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock contenido %}

@@ -26,4 +26,5 @@ username:Lautaro
 contraseña:12345
 
 # Usuarios normales
-??
+username:Pablito
+contraseña:contraseña123
