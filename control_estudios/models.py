@@ -16,7 +16,7 @@ class Curso(models.Model):
 class Estudiante(models.Model):
     apellido = models.CharField(max_length=256)
     nombre = models.CharField(max_length=256)
-    email = models.EmailField(blank=True)
+    email = models.CharField(max_length=300)
     telefono = models.CharField(max_length=20, blank=True, null=True)
     dni = models.CharField(max_length=32)
     fecha_nacimiento = models.DateField(null=True)

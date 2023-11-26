@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
                 ('apellido', models.CharField(max_length=256)),
                 ('nombre', models.CharField(max_length=256)),
                 ('dni', models.CharField(max_length=32)),
-                ('email', models.EmailField(blank=True, max_length=254)),
+                ('email', models.CharField(blank=True, max_length=254)),
                 ('fecha_nacimiento', models.DateField(blank=True, null=True)),
                 ('profesion', models.CharField(max_length=128)),
                 ('bio', models.TextField(blank=True, null=True)),

@@ -25,8 +25,8 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'inicio' %}">Sobre Mi</a>
-                <a class="navbar-brand" href="{% url 'lista_estudiantes' %}">Perfiles</a>
-                <a class="navbar-brand" href="{% url 'lista_cursos' %}">Blogs</a>
+                <a class="navbar-brand" href="{% url 'lista_estudiantes' %}">Peliculas</a>
+                <a class="navbar-brand" href="{% url 'lista_cursos' %}">Personas</a>
                 <a class="navbar-brand" href="https://plataforma-beta.coderhouse.com/">Coderhouse</a>
                 {% if user.is_authenticated %}
                 <a class="btn btn-warning" href="{% url 'logout' %}">Cierre sesión</a>

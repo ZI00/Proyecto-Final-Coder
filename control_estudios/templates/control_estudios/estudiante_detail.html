@@ -2,21 +2,20 @@
 
 {% block contenido %}
 
+
 <p>
-  <strong>Apellido:</strong> {{object.apellido}}
+  <strong>Titulo:</strong> {{object.nombre}}
 </p>
 <p>
-  <strong>Nombre:</strong> {{object.nombre}}
+  <strong>Subtitulo:</strong> {{object.apellido}}
 </p>
 <p>
-  <strong>DNI:</strong> {{object.dni}}
+  <strong>Cuerpo:</strong> {{object.email}}
 </p>
 <p>
-  <strong>Telefono:</strong> {{object.telefono}}
+  <strong>Autor:</strong> {{object.dni}}
 </p>
-<p>
-  <strong>Email:</strong> {{object.email}}
-</p>
+<p> <strong>fecha:</strong>  Semana del 27 de Noviembre</p>
 
 <br>
 <a href="{% url 'lista_estudiantes' %}">Volver lista</a>

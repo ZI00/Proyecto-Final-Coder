@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block titulo %}
-<title>Blogs</title>
+<title>Perfiles</title>
 {% endblock titulo %}
 
 {% block contenido %}
 <h1 style="color:orange;">
-  Blogs
+  La lista
 </h1>
+<br>
+<h3>Lista de personas que van a asistir a alguna pelicula en la semana</h3>
 <a href="{% url 'lista_cursos' %}">Ver todos</a>
-<a href="{% url 'crear_curso' %}">Crear curso</a>
+<a href="{% url 'crear_curso' %}">Anotarse</a>
 <br><br>
 <form action="{% url 'buscar_cursos' %}" method="post">
   {% csrf_token %}
@@ -21,9 +23,9 @@
 <table class="table">
   <tbody>
     <tr>
-      <th>ID</th>
+      <th>Nº Usuario</th>
       <th>Nombre</th>
-      <th>Comision</th>
+      <th>Edad</th>
       <th></th>
       <th></th>
     </tr>
