@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 
 {% block titulo %}
-<title>Coderhouse 47780 - Inicio</title>
+<title>Primera Página</title>
 {% endblock titulo %}
 
 
 {% block contenido %}
 {% if user.is_authenticated %}
-<h1>Bienvenido/a {{ user.last_name }}, {{ user.first_name }}</h1>
+<h1>Bienvenido/a {{ user.last_name }}, {{ user.first_name }} a mi primera pagina web</h1>
 {% else %}
-<h1>Bienvenido/a visitante</h1>
+<h1>Bienvenido/a visitante a mi primera pagina web</h1>
 {% endif %}
+<br><h2>¿Quien soy?</h2>
+<br><H4 style="color:gray;">Mi Nombre es Lautaro Reinaga, estoy aprendiendo programación y esta es mi primer pagina con Django. <br> Soy de Buenos Aires, Argentina y empecé el curso en Coder para tener un primer contacto con la programación luego de haber terminado la secundaria. Dentro de las cosas que mas me gusta hacer está el pasar tiempo con mis amigos ya sea jugando al futbol o a algun videojuego.</H4>
 {% endblock contenido %}
